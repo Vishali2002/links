@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Adding Page</title>
+    <link rel="stylesheet" href="/templates/style.css" />
+</head>
+<div class="company-header">
+    <img src="/images/videojet.png" alt="Videojet Logo" />
+    <img src="/images/vti-logo.png" alt="VTI Logo" class="vti-logo" />
+    <div class="admin-dropdown" id="home-btn">
+        <a href="/main" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+            <img src="/images/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+    </div>
+    <div class="admin-dropdown" id="logout-btn" style="display:none;">
+        <div style="display: flex; align-items: center; cursor: pointer;">
+            <img src="/images/admin-icon.png" alt="Admin">
+            <span>Admin ▼</span>
+        </div>
+        <div class="dropdown-content">
+            <a href="/">Logout</a>
+        </div>
+    </div>
+</div>
+<body>
+ 
+    <div id="login-container" class="login-page-container">
+        <h2>Login</h2>
+        <form id="loginForm" class="login-form">
+            <label>Username:</label>
+            <input type="text" id="login-username" required>
+           
+            <label>Password:</label>
+            <input type="password" id="login-password" required>
+           
+            <button type="submit" class="login-btn">Login</button>
+            <div id="login-error" style="color:red;margin-top:10px;display:none;"></div>
+        </form>
+    </div>
+ 
+ 
+    <div class="form-container" id="main-content" style="display:none;">
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('links')">Manage Links</button>
+            <button class="tab-btn" onclick="showTab('categories')">Manage Categories</button>
+        </div>
+ 
+        <!-- Links Management Tab -->
+        <div id="links-tab" class="tab-content active">
+            <h2>Add a New Link</h2>
+            <form id="linkForm">
+                <div class="category-row">
+                    <label for="category">Category:</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                    </select>
+                </div>
+     
+                <div class="input-row">
+                    <label for="team">Team:</label>
+                    <input type="text" id="team" required>
+                </div>
+                <div class="input-row">
+                    <label for="url">URL:</label>
+                    <input type="url" id="url" required>
+                </div>
+                <div class="input-row">
+                    <label for="description">Description:</label>
+                    <input type="text" id="description">
+                </div>
+     
+                <button type="submit">Add Link</button>
+            </form>
+     
+            <h2>Existing Links</h2>
+            <ul id="linksList"></ul>
+        </div>
+ 
+        <!-- Categories Management Tab -->
+        <div id="categories-tab" class="tab-content" style="display:none;">
+            <h2>Add a New Category</h2>
+            <form id="categoryForm" enctype="multipart/form-data">
+                <div class="form-row">
+                    <label for="new-category-name">Category Name:</label>
+                    <input type="text" id="new-category-name" required placeholder="e.g., Jenkins, JFrog, Docker">
+                </div>
+               
+                <div class="form-row">
+                    <label for="category-icon">Category Icon (Optional):</label>
+                    <input type="file" id="category-icon" accept="image/*">
+                </div>
+                <small style="color: #666; margin-left: 180px; display: block; margin-top: -3px; margin-bottom: 10px;">If no icon is provided, the category name will be used as a text icon</small>
+               
+                <button type="submit">Add Category</button>
+            </form>
+ 
+            <h2>Existing Categories</h2>
+            <div id="categoriesList"></div>
+        </div>
+    </div>
+ 
+    <script src="/static/datascript.js"></script>
+    <script src="/static/login.js"></script>
+    <script src="/static/categories.js"></script>
+</body>
+</html>
+ 
+ 

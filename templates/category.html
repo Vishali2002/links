@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ category_name }}</title>
+    <link rel="stylesheet" href="/templates/style.css" />
+</head>
+ 
+<body>
+    <a href="/" class="back-button-top" title="Back to Home">
+        <img src="/images/back-icon.png" alt="Back" />
+    </a>
+    
+    <div class="category-header">
+        {% if is_text_icon %}
+            <div class="category-text-icon">{{ category_name.upper() }}</div>
+        {% else %}
+            <img src="{{ icon_path }}" alt="{{ category_name }} Logo" />
+        {% endif %}
+    </div>
+    <div class="category-container" id="categoryContainer">
+        <div id="loadingIndicator" style="text-align: center; padding: 20px; color: #666;">
+            <p>Loading {{ category_name }} links...</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+ 
+    <script src="/static/loadLinks.js"></script>
+    <script>
+        loadLinks('{{ category_name }}', 'categoryContainer');
+    </script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
