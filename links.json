@@ -1,0 +1,36 @@
+{
+    "Artifactory": {
+        "HUN": [
+            {
+                "url": "http://10.27.50.132:8082/ui/repos/tree/General/Eclipse",
+                "description": "HUN Artifactory"
+            }
+        ],
+        "SHA": [
+            {
+                "url": "http://pidsghws0149:8081/artifactory/webapp/#/artifacts/browse/tree/General/",
+                "description": "SHA Artifactory"
+            }
+        ]
+    },
+    "Jenkins": {
+        "HUN": [
+            {
+                "url": "http://pidhunwsdev0054:8080/",
+                "description": "HUN Jenkins-Plans"
+            }
+        ],
+        "SHA": [
+            {
+                "url": "http://10.27.185.72:8080/",
+                "description": "SHA Jenkin -Plans"
+            }
+        ],
+        "BD": [
+            {
+                "url": "http://10.27.50.25:8090/",
+                "description": "BD Jenkins-Plans"
+            }
+        ]
+    }
+}

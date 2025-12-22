@@ -1,0 +1,10 @@
+{
+    "Artifactory": {
+        "icon": "artifactory.png",
+        "url": "/artifactory"
+    },
+    "Jenkins": {
+        "icon": "jenkins.png",
+        "url": "/jenkins"
+    }
+}
