@@ -6,7 +6,7 @@ async function loadCategories() {
         
         // Add hardcoded Atlassian categories
         categories['Atlassian Cloud'] = {
-            icon: 'Atlassian_cloud.png',
+            icon: 'Atlassian_Cloud.png',
             url: '/cloud'
         };
         categories['Atlassian Server'] = {
@@ -77,3 +77,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
